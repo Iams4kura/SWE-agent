@@ -6,9 +6,7 @@ import pytest
 from sweagent.run.compare_runs import run_from_cli
 
 
-def test_compare_many_handles_run_without_common_instances(
-    tmp_path: Path, capsys: pytest.CaptureFixture[str]
-) -> None:
+def test_compare_many_handles_run_without_common_instances(tmp_path: Path, capsys: pytest.CaptureFixture[str]) -> None:
     results = [
         {"submitted_ids": ["case-a"], "resolved_ids": ["case-a"]},
         {"submitted_ids": ["case-b"], "resolved_ids": ["case-b"]},
